@@ -2,9 +2,9 @@
 # -*- coding: utf-8 -*-
 
 mysqlsetting = {
-    "user":"",
-    "password":"",
-    "host":"",
+    "user":"zifang",
+    "password":"tFKHQpmT632n",
+    "host":"127.0.0.1",
     "port":3306,
-    "database":""
+    "database":"psn"
 }
