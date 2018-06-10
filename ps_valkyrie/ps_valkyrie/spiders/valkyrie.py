@@ -31,6 +31,7 @@ class ValkyrieSpider(scrapy.Spider):
             }
             item = PsValkyrieItem()
             item["ps_id"] = _href.rpartition("/")[-1]
+            yield item
             #yield scrapy.Request(url=_valkyrie_url, meta=_meta, callback=self.valkyrie_parse)
 
         if self._page < 52:
