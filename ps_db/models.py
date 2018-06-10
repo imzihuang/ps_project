@@ -148,7 +148,7 @@ class DLC(BaseModel):
        return {c.name: getattr(self, c.name, None).strftime('%Y-%m-%d %H:%M:%S') if isinstance(getattr(self, c.name, None), datetime) else getattr(self, c.name, None) for c in self.__table__.columns}
 """
 
-class Franchise(BaseModel):
+class GameCode(BaseModel):
     __tablename__ = 'game_code'
     id = Column(Integer, primary_key=True)
     store_game_code = Column(VARCHAR(255), nullable=False)
