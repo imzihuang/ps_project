@@ -5,7 +5,7 @@
 # Don't forget to add your pipeline to the ITEM_PIPELINES setting
 # See: https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 import os
-from ps_db.base import add_game_code
+from ps_db.unit import add_game_code
 
 class PsValkyriePipeline(object):
     def __init__(self):
