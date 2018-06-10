@@ -11,6 +11,8 @@ from base import get_engine
 BaseModel = declarative_base()
 DynamicDModel = declarative_base()
 
+"""
+
 class Franchise(BaseModel):
     __tablename__ = 'franchise'
     id = Column(Integer, primary_key=True)
@@ -144,8 +146,13 @@ class DLC(BaseModel):
 
     def to_dict(self):
        return {c.name: getattr(self, c.name, None).strftime('%Y-%m-%d %H:%M:%S') if isinstance(getattr(self, c.name, None), datetime) else getattr(self, c.name, None) for c in self.__table__.columns}
+"""
 
-
+class Franchise(BaseModel):
+    __tablename__ = 'game_code'
+    id = Column(Integer, primary_key=True)
+    store_game_code = Column(VARCHAR(255), nullable=False)
+    type = Column(SMALLINT, default=1)
 
 def register_db():
     engine = get_engine()
